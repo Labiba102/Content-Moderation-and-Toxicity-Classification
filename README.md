@@ -9,6 +9,8 @@ The training dataset consists of 159,571 comments distributed across seven class
 
 To address this, we created a balanced dataset by splitting the data into two categories: toxic (any label is '1') and clean (all labels are '0'). We sampled 15,000 instances from each category to form a balanced dataset of 30,000 instances for training, which improved model performance significantly.
 
+![Unknown](https://github.com/user-attachments/assets/dc572248-9a98-490b-acc8-5b701bb899e5)
+
 ## Model Implementations
 
 ### 1. Logistic Regression Model
@@ -20,6 +22,8 @@ We used a one-vs-rest classifier with logistic regression from the scikit-learn 
 
 #### Limitations:
 One-vs-rest classification using logistic regression is suboptimal for multi-label text classification due to its independent assumption between labels and oversimplification of the complex interactions in natural language. Neural network-based approaches like BERT are more suitable for this problem.
+
+![Snip 2024-09-11 17 41 47](https://github.com/user-attachments/assets/2cfaff7b-2c51-47f9-8a77-99abd9b769e2)
 
 ### 2. LSTM Model
 Data Preprocessing:
@@ -40,6 +44,10 @@ The model utilized AdamW as the optimizer with a weight decay term to mitigate o
 
 ## Results:
 The BERT model achieved an accuracy of 87%. The evaluation metrics included the ROC curve, Area Under the Curve (AUC), accuracy, and a classification report, demonstrating promising results in handling multi-label text classification for toxicity.
+![Snip 2024-09-11 17 42 50](https://github.com/user-attachments/assets/10d138f2-69e1-4c2f-9f4c-b2dc3291aad0)
+
+![Unknown-2](https://github.com/user-attachments/assets/526f1e9f-f05d-4bb4-aa4d-3174fb173f94)
+
 
 ## Summary
 
@@ -47,7 +55,7 @@ The project aimed to enhance content moderation through toxicity classification.
 
 ## Future Work
 
-###Further improvements can be made by:
+### Further improvements can be made by:
 
 Experimenting with more advanced neural network architectures.
 Exploring different techniques for handling class imbalance, such as SMOTE or class-weighted loss functions.
